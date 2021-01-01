@@ -1,0 +1,12 @@
+.card {
+  margin: 10px;
+}
+
+.card-footer {
+  background: none;
+}
+
+.portfolio-img {
+  width: 318px;
+  height: 200px;
+}
