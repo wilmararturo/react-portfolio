@@ -27,6 +27,12 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:wilmararturo/react-portfolio.git"
+  },
+  "author": "Wilmar Stephens",
+  "license": "MIT",
   "eslintConfig": {
     "extends": [
       "react-app",
