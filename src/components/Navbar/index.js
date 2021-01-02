@@ -5,9 +5,9 @@ import "./style.css";
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <Link to="/">
+      {/* <Link to="/">
         <span className="navbar-brand">Wilmar Stephens</span>
-      </Link>
+      </Link> */}
       <button
         className="navbar-toggler"
         type="button"
@@ -22,11 +22,21 @@ function Navbar() {
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav ml-auto">
           <Link
+            to="/home"
+            className={
+              window.location.pathname === "/home"
+                ? "nav-link active"
+                : "nav-link inactive"
+            }
+          >
+            Home
+          </Link>
+          <Link
             to="/contact"
             className={
               window.location.pathname === "/contact"
                 ? "nav-link active"
-                : "nav-link"
+                : "nav-link inactive"
             }
           >
             Contact
@@ -34,9 +44,9 @@ function Navbar() {
           <Link
             to="/portfolio"
             className={
-              window.location.pathname === "/portfoliio"
+              window.location.pathname === "/portfolio"
                 ? "nav-link active"
-                : "nav-link"
+                : "nav-link inactive"
             }
           >
             Portfolio
@@ -46,7 +56,7 @@ function Navbar() {
             className={
               window.location.pathname === "/resume"
                 ? "nav-link active"
-                : "nav-link"
+                : "nav-link inactive"
             }
           >
             Resume

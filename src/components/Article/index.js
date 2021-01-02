@@ -5,7 +5,7 @@ function Article(props) {
     .split(" ")
     .map((size) => "col-" + size)
     .join(" ");
-  return <article className={size}>{props.children}</article>;
+  return <article className={`${size} text-left`}>{props.children}</article>;
 }
 
 export default Article;

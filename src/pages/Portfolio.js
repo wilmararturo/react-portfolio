@@ -1,21 +1,25 @@
 import React from "react";
 import Container from "../components/Container";
-import Jumbotron from "../components/Jumbotron";
 import Row from "../components/Row";
 import Card from "../components/Card";
+import SectionHeader from "../components/SectionHeader";
+import ContactButtons from "../components/ContactButtons";
+
 import Projects from "../Projects.json";
 
 function Portfolio() {
   return (
     <Container>
-      <Jumbotron>
-        <h1>Projects</h1>
-      </Jumbotron>
-      <hr></hr>
+      <Row>
+        <SectionHeader header="Portfolio" />
+      </Row>
       <Row rowID="project-row">
         {Projects.map((item, index) => (
           <Card project={item} key={index} />
         ))}
+      </Row>
+      <Row>
+        <ContactButtons />
       </Row>
     </Container>
   );

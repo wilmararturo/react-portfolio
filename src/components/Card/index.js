@@ -6,7 +6,7 @@ import "./style.css";
 
 const Card = (props) => {
   return (
-    <div className="card" key={props.projectIndex}>
+    <div className="card">
       <figure className="figure card-img-top">
         <img
           src={props.project.image}

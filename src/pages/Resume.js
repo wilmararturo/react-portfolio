@@ -1,28 +1,36 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Jumbotron from "../components/Jumbotron";
+import Container from "../components/Container";
+import Row from "../components/Row";
+import SectionHeader from "../components/SectionHeader";
 import SaveIcon from "@material-ui/icons/Save";
+import ContactButtons from "../components/ContactButtons";
 
 function Resume() {
   return (
-    <Jumbotron>
+    <Container>
+      <Row>
+        <SectionHeader header="Resume" />
+      </Row>
       <div className="row" id="contact-resume-row">
         <div
           className="btn-group m-auto"
           role="group"
           aria-label="Contact Buttons"
         >
-          <Link
-            to="assets/pdf/WilmarAStephens.pdf"
-            className="btn btn-secondary btn-lg active"
+          <a
+            href="assets/pdf/WilmarAStephens.pdf"
+            className="btn btn-secondary btn-lg mb-3 active"
             download="WilmarStephens.pdf"
           >
             <SaveIcon />
             Download Resume
-          </Link>
+          </a>
         </div>
       </div>
-    </Jumbotron>
+      <Row>
+        <ContactButtons />
+      </Row>
+    </Container>
   );
 }
 
