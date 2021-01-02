@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkIcon from "@material-ui/icons/Link";
 import "./style.css";
@@ -24,19 +23,19 @@ const Card = (props) => {
           role="group"
           aria-label="Project Buttons"
         >
-          <Link
-            to={props.project.githubURL}
+          <a
+            href={props.project.githubURL}
             className="btn btn-secondary active mr-1"
           >
             <GitHubIcon /> GitHub
-          </Link>
-          <Link
-            to={props.project.websiteURL}
+          </a>
+          <a
+            href={props.project.websiteURL}
             className="btn btn-secondary active ml-1"
           >
             <LinkIcon />
             Website
-          </Link>
+          </a>
         </div>
       </div>
     </div>
